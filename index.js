@@ -38,9 +38,8 @@ app.get('/api/notes/:id', (request, response) => {
   console.log(id);
 
   const note = notes.filter((note) => note.id === id);
-  console.log(note);
 
-  if (note) {
+  if (note.length > 0) {
     response.json(note);
   } else {
     response.status(404).end();
