@@ -14,6 +14,12 @@ morgan.token('data', (req) => {
   }
 });
 
+app.get('/api/notes/', (request, response) => {
+  Note.find({}).then((notes) => {
+    response.json(notes);
+  });
+});
+
 app.get('/api/notes/:id', (request, response, next) => {
   const id = Number(request.params.id);
   console.log(id);
