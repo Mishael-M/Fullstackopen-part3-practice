@@ -4,5 +4,5 @@ Content-Type: application/json
 
 {
     "content": "VS Code REST Client is awesome!",
-    "important": false
+    "important": true
 }
